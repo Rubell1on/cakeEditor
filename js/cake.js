@@ -137,11 +137,14 @@ function onClick( event ) {
     selLayer(layerName);
     // $('.sel').find(layerName).prop({selected: true});
 	// for ( var i = 0; i < intersects.length; i++ ) {
-            prevLayer = layerName;
-            prevColor = intersects[0].object.material.color.getStyle();
-            console.log(intersects[0].object.material.color);
-            intersects[0].object.material.color.set( 0xff0000 );
-            $('.cardOverlay').animate({bottom: "-325px"}, 400, "easeInOutBack");
+    prevLayer = layerName;
+    prevColor = intersects[0].object.material.color.getStyle();
+    console.log("11111",$.colors(prevColor).toString('hex'));
+    convertedColor = $.colors(prevColor).toString('hex');
+    console.log(intersects[0].object.material.color);
+    intersects[0].object.material.color.set( 0xff0000 );
+    $('option[color="'+convertedColor+'"]').attr('selected', 'selected');
+    $('.cardOverlay').animate({bottom: "-325px"}, 400, "easeInOutBack");
 
 	// }
 

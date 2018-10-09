@@ -68,5 +68,13 @@ var
 //      cardPos = parseFloat(subStr);
 // }
 
+$('.selColor').change(function(){
+    selectedColor = $('.selColor').find(':selected').attr("color");
+    cake.getObjectByName(layerName).material = new THREE.MeshLambertMaterial({color: selectedColor, wireframe: false});
+    prevColor = selectedColor;
+    
+});
+
+
 
 
