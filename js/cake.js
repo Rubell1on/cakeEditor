@@ -146,5 +146,5 @@ function onClick( event ) {
 	// }
 
 }
-
+//Комент
 window.addEventListener( 'mousedown', onClick, false );
