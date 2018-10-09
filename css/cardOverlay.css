@@ -66,3 +66,10 @@
     /* width: 100%;
     height: 20px; */
 }
+
+@media (min-width: 480px) {
+    .cardOverlay {
+        width: 400px;
+        left: calc(50% - 200px);
+    }
+}
